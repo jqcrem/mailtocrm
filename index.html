@@ -3,61 +3,298 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MailToCRM — Keep Airtable current</title>
-  <meta name="description" content="MailToCRM turns important correspondence into reviewable Airtable updates for nonprofit development teams.">
+  <title>MailToCRM — Turn email threads into Airtable updates you approve</title>
+  <meta name="description" content="MailToCRM turns the email threads that matter into contact, organization, interaction, and follow-up updates you review before they reach your existing Airtable base. A Chrome extension for Gmail and Outlook on the web.">
+  <meta name="theme-color" content="#0b1620">
   <link rel="canonical" href="https://mailtocrm.com/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta property="og:title" content="MailToCRM — Keep Airtable current">
-  <meta property="og:description" content="Keep Airtable current with the conversations that matter.">
+  <meta property="og:title" content="MailToCRM — Turn email threads into Airtable updates you approve">
+  <meta property="og:description" content="Select a thread in Gmail or Outlook on the web, review the proposed changes, and write only what you approve to your existing Airtable base.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mailtocrm.com/">
-  <meta property="og:image" content="https://mailtocrm.com/social-card.svg">
+  <meta property="og:image" content="https://mailtocrm.com/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="mailtocrm">
-  <header class="nav shell">
-    <a class="brand" href="/" aria-label="MailToCRM home"><span class="brand-mark">M</span>MailToCRM</a>
-    <a class="small-link" href="mailto:jacob@mailtocrm.com">Contact</a>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="wrap nav" aria-label="Primary">
+      <a class="brand" href="/">
+        <svg class="brand-mark" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="8" fill="#45d1d9"/><path d="M8 11.5h7.5M8 16h5M8 20.5h7.5" stroke="#0b1620" stroke-width="2.2" stroke-linecap="round"/><path d="M17.5 16h3.2" stroke="#0b1620" stroke-width="2.2" stroke-linecap="round"/><rect x="21.5" y="11" width="3.5" height="10" rx="1.4" fill="#0b1620"/></svg>
+        <span>MailToCRM</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#text">By text</a></li>
+      </ul>
+      <a class="btn btn-cyan btn-sm" href="mailto:jacob@mailtocrm.com?subject=MailToCRM%20workflow"><span class="only-wide">Discuss your workflow</span><span class="only-narrow">Email Jacob</span></a>
+    </nav>
   </header>
-  <main>
-    <section class="hero shell">
-      <div>
-        <p class="eyebrow">Email-to-Airtable workflow</p>
-        <h1>Keep Airtable current with the conversations that matter.</h1>
-        <p class="lede">MailToCRM helps nonprofit development teams turn correspondence into reviewable contact, interaction, and follow-up records—without asking staff to retype the story.</p>
-        <a class="button" href="mailto:jacob@mailtocrm.com?subject=MailToCRM%20workflow">Discuss your Airtable workflow <span aria-hidden="true">→</span></a>
-      </div>
-      <aside class="stage-card" aria-label="Fictional CRM update example">
-        <div class="card-top"><span>Illustrative correspondence</span><span class="status">3 proposed updates</span></div>
-        <blockquote>“Thanks for the tour. Our family foundation is interested in the youth program—could you send the FY26 budget before our November meeting?”</blockquote>
-        <div class="record-list">
-          <div><span class="record-icon">P</span><p><small>Contact</small><strong>Maya Patel · Patel Family Foundation</strong></p></div>
-          <div><span class="record-icon">I</span><p><small>Interaction</small><strong>Program tour follow-up</strong></p></div>
-          <div><span class="record-icon">F</span><p><small>Follow-up</small><strong>Send FY26 budget before November meeting</strong></p></div>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="label label-dark">Chrome extension · Gmail and Outlook on the web</p>
+          <h1 id="hero-title">Turn email threads into Airtable updates you approve.</h1>
+          <p class="lede">Select the thread that matters. MailToCRM proposes the contact, organization, interaction, and follow-up changes, and you approve each one before it reaches your existing Airtable base.</p>
+          <div class="hero-actions">
+            <a class="btn btn-cyan" href="mailto:jacob@mailtocrm.com?subject=MailToCRM%20workflow">Discuss your Airtable workflow</a>
+            <a class="text-link text-link-dark" href="#how">See how it works</a>
+          </div>
+          <p class="stage"><span class="stage-dot" aria-hidden="true"></span>Early product, in use with pilot teams.</p>
         </div>
-        <p class="example-note">Fictional example — no Airtable base is connected.</p>
-      </aside>
-    </section>
-    <section class="section shell">
-      <p class="eyebrow">A review-first workflow</p>
-      <h2>Preserve the conversation. Propose the record.</h2>
-      <div class="steps">
-        <article><span>01</span><h3>Select correspondence</h3><p>Choose the donor or partner conversation that should be reflected in Airtable.</p></article>
-        <article><span>02</span><h3>Review changes</h3><p>See proposed contacts, interactions, and follow-ups before anything is written.</p></article>
-        <article><span>03</span><h3>Update Airtable</h3><p>Apply the approved changes to the team’s existing base and workflow.</p></article>
+
+        <figure class="map" aria-labelledby="map-cap">
+          <div class="map-mail">
+            <div class="map-head">
+              <span class="label label-dark">Email thread</span>
+              <span class="map-meta">3 messages</span>
+            </div>
+            <p class="map-sender"><span class="initials" aria-hidden="true">MP</span><span><span class="map-name">Maya Patel</span> <span class="map-addr">maya@patelfamilyfdn.org</span></span></p>
+            <p class="map-body">Thanks for showing us the <mark>youth program on Tuesday</mark>. Could you <mark>send the FY26 budget before our board meets on November 12</mark>?</p>
+            <p class="map-sig"><mark>Maya Patel, Program Officer</mark><br><mark>Patel Family Foundation</mark></p>
+          </div>
+
+          <p class="map-step label label-dark" id="map-list">Proposed for your Airtable base</p>
+          <ol class="map-rows" aria-labelledby="map-list">
+            <li>
+              <span class="map-from">Maya Patel, Program Officer</span>
+              <span class="wire" aria-hidden="true"></span>
+              <span class="field">
+                <span class="field-top"><span class="field-table">Contacts</span><span class="tag tag-update">Update</span></span>
+                <span class="field-value">Maya Patel <span class="field-note">Title → Program Officer</span></span>
+              </span>
+            </li>
+            <li>
+              <span class="map-from">Patel Family Foundation</span>
+              <span class="wire" aria-hidden="true"></span>
+              <span class="field">
+                <span class="field-top"><span class="field-table">Organizations</span><span class="tag tag-existing">Existing</span></span>
+                <span class="field-value">Patel Family Foundation</span>
+              </span>
+            </li>
+            <li>
+              <span class="map-from">youth program on Tuesday</span>
+              <span class="wire" aria-hidden="true"></span>
+              <span class="field">
+                <span class="field-top"><span class="field-table">Interactions</span><span class="tag tag-new">New</span></span>
+                <span class="field-value">Youth program tour <span class="field-note">Oct 13</span></span>
+              </span>
+            </li>
+            <li>
+              <span class="map-from">send the FY26 budget before … November 12</span>
+              <span class="wire" aria-hidden="true"></span>
+              <span class="field">
+                <span class="field-top"><span class="field-table">Follow-ups</span><span class="tag tag-new">New</span></span>
+                <span class="field-value">Send FY26 budget <span class="field-note">Due Nov 11</span></span>
+              </span>
+            </li>
+          </ol>
+
+          <p class="map-foot"><span class="ring" aria-hidden="true"></span>4 changes waiting for your review. Nothing is written yet.</p>
+          <figcaption id="map-cap" class="caption caption-dark">Fictional example. People, organizations, and dates are made up.</figcaption>
+        </figure>
       </div>
     </section>
-    <section class="section shell split">
-      <div><p class="eyebrow">Current stage</p><h2>Starting with email.</h2></div>
-      <div class="notice"><strong>In development</strong><p>The email-to-Airtable workflow is the current focus. An iMessage workflow is part of the product direction and is explicitly still in development.</p></div>
+
+    <section class="section" aria-labelledby="problem-title">
+      <div class="wrap split">
+        <div>
+          <p class="label">The problem</p>
+          <h2 id="problem-title">Relationships move in email. Airtable falls behind.</h2>
+        </div>
+        <ul class="problem-list">
+          <li><span class="problem-key">In the inbox</span><span>A client introduces a colleague. A funder asks for a budget by Friday. A partner moves a meeting.</span></li>
+          <li><span class="problem-key">In Airtable</span><span>Each detail belongs in a record, but retyping it takes time nobody has.</span></li>
+          <li><span class="problem-key">The result</span><span>The base drifts from what the team knows, and follow-ups slip.</span></li>
+        </ul>
+      </div>
     </section>
-    <section class="founder shell">
-      <div class="avatar" aria-hidden="true">JC</div>
-      <div><p class="eyebrow">Founder</p><h2>Jacob Cremers</h2><p>An early product project by Jacob Cremers, founder of Beans.</p></div>
-      <a class="button secondary" href="mailto:jacob@mailtocrm.com?subject=MailToCRM%20workflow">Discuss your Airtable workflow</a>
+
+    <section class="section section-white" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <p class="label">How it works</p>
+        <h2 id="how-title" class="h2-narrow">From thread to record in four steps.</h2>
+        <ol class="steps">
+          <li>
+            <span class="step-num" aria-hidden="true">01</span>
+            <h3>Select the thread</h3>
+            <p>Open the conversation in Gmail or Outlook on the web and select it in the MailToCRM Chrome extension.</p>
+          </li>
+          <li>
+            <span class="step-num" aria-hidden="true">02</span>
+            <h3>Get proposed changes</h3>
+            <p>MailToCRM reads the thread and your base, then proposes contact, organization, interaction, and follow-up changes.</p>
+          </li>
+          <li>
+            <span class="step-num" aria-hidden="true">03</span>
+            <h3>Review each one</h3>
+            <p>Edit a value, pick a different matching person, or reject a change. Nothing has been written yet.</p>
+          </li>
+          <li>
+            <span class="step-num step-num-done" aria-hidden="true">04</span>
+            <h3>Approve and write</h3>
+            <p>Approved changes are written to your existing Airtable base, in the tables and fields you already use.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="review-title">
+      <div class="wrap review-grid">
+        <div class="review-copy">
+          <p class="label">The review panel</p>
+          <h2 id="review-title">Every change is a card you check before it lands.</h2>
+          <p>The panel opens beside your mail. Each card shows the table, the fields, and whether it updates an existing record or creates a new one.</p>
+          <ul class="ticks">
+            <li>Change any value before approving it</li>
+            <li>Swap a matched person if it picked the wrong one</li>
+            <li>Written cards collapse, so the open one is always next</li>
+          </ul>
+        </div>
+
+        <figure class="ui" aria-labelledby="ui-cap">
+          <div class="ui-bar" aria-hidden="true"><span></span><span></span><span></span><span class="ui-title">Inbox · Youth program tour</span></div>
+          <div class="ui-body">
+            <div class="ui-mail" aria-hidden="true">
+              <p class="ui-subject">Youth program tour</p>
+              <div class="ui-msg">
+                <span class="initials initials-light">MP</span>
+                <div><p class="ui-name">Maya Patel</p><p class="ui-snip">Thanks for showing us the youth program on Tuesday. Could you send the FY26 budget before our board meets on November 12?</p></div>
+              </div>
+              <div class="ui-msg">
+                <span class="initials initials-light">You</span>
+                <div><p class="ui-name">You</p><p class="ui-snip">Glad you could come. I’ll send the budget this week.</p></div>
+              </div>
+              <div class="ui-lines"><span></span><span></span><span></span></div>
+            </div>
+
+            <div class="ui-panel">
+              <div class="ui-panel-head">
+                <span class="ui-brand">MailToCRM</span>
+                <span class="ui-count">3 of 4 written</span>
+              </div>
+              <ul class="ui-cards">
+                <li class="ui-done"><span class="check" aria-hidden="true"></span><span class="ui-done-text"><span class="field-table">Contacts</span> Maya Patel</span><span class="tag tag-done">Updated</span></li>
+                <li class="ui-done"><span class="check" aria-hidden="true"></span><span class="ui-done-text"><span class="field-table">Organizations</span> Patel Family Foundation</span><span class="tag tag-done">Linked</span></li>
+                <li class="ui-done"><span class="check" aria-hidden="true"></span><span class="ui-done-text"><span class="field-table">Interactions</span> Youth program tour</span><span class="tag tag-done">Created</span></li>
+                <li class="ui-open">
+                  <div class="field-top"><span class="field-table">Follow-ups</span><span class="tag tag-new">New record</span></div>
+                  <dl class="ui-fields">
+                    <div><dt>Task</dt><dd>Send FY26 budget</dd></div>
+                    <div><dt>Due</dt><dd><del>Nov 12</del> Nov 11 <span class="tag tag-update">Edited</span></dd></div>
+                    <div><dt>Contact</dt><dd><span class="link-chip">Maya Patel</span></dd></div>
+                    <div><dt>Organization</dt><dd><span class="link-chip">Patel Family Foundation</span></dd></div>
+                  </dl>
+                  <p class="ui-wait"><span class="ring ring-light" aria-hidden="true"></span>Waiting for your approval</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <figcaption id="ui-cap" class="caption">Illustration of the review panel with fictional records. Table and field names come from your own base.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-white" aria-labelledby="fit-title">
+      <div class="wrap">
+        <p class="label">Fit and limits</p>
+        <h2 id="fit-title" class="h2-narrow">What it does, and where it stops.</h2>
+        <div class="fit">
+          <div class="fit-col">
+            <h3>What it handles</h3>
+            <ul class="fit-list fit-yes">
+              <li><strong>Gmail and Outlook on the web.</strong> A Chrome extension that works beside the mail you already use.</li>
+              <li><strong>Your base, your schema.</strong> Changes go into the tables and fields you already have. There is no template base to move to.</li>
+              <li><strong>Matches before it creates.</strong> It looks for people and organizations already in your base before proposing new records.</li>
+              <li><strong>Follow-ups, not just notes.</strong> Asks and deadlines in a thread become follow-up records.</li>
+            </ul>
+          </div>
+          <div class="fit-col fit-col-limits">
+            <h3>Where it stops</h3>
+            <ul class="fit-list fit-no">
+              <li><strong>Nothing is written without approval.</strong> Every change waits for someone on your team to approve it.</li>
+              <li><strong>Airtable only.</strong> It doesn’t connect to other CRMs.</li>
+              <li><strong>Chrome and web mail only.</strong> It doesn’t run inside desktop mail apps.</li>
+              <li><strong>Early.</strong> It’s in use with pilot teams and still changing.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="text" aria-labelledby="text-title">
+      <div class="wrap">
+        <div class="text-panel">
+          <div class="text-copy">
+            <p class="label label-dark">Also by text</p>
+            <h2 id="text-title">Ask about a relationship, or log one, over iMessage.</h2>
+            <p>Text a question and get an answer from your Airtable base. Text a quick note after a call or meeting, and it becomes an interaction record you review before it’s saved.</p>
+          </div>
+          <div class="threads">
+            <figure class="thread" aria-labelledby="ask-cap">
+              <figcaption id="ask-cap" class="label label-dark">Ask</figcaption>
+              <p class="bubble bubble-out">Who asked me to follow up this week?</p>
+              <p class="bubble bubble-in">Two people: Maya Patel asked for the FY26 budget, and Sam Ortiz asked for site visit dates.</p>
+            </figure>
+            <figure class="thread" aria-labelledby="log-cap">
+              <figcaption id="log-cap" class="label label-dark">Log</figcaption>
+              <p class="bubble bubble-out">Call with Sam Ortiz from Ortiz Trust. Wants site visit dates for November.</p>
+              <div class="bubble bubble-in bubble-card">
+                <span class="field-top"><span class="field-table">Interactions</span><span class="tag tag-new">Proposed</span></span>
+                <span class="bubble-value">Call with Sam Ortiz · Ortiz Trust</span>
+                <span class="bubble-note">Review it before it’s saved.</span>
+              </div>
+            </figure>
+          </div>
+          <p class="caption caption-dark text-caption">Fictional examples.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" aria-labelledby="founder-title">
+      <div class="wrap">
+        <div class="founder">
+          <picture>
+            <source srcset="assets/jacob-cremers.webp" type="image/webp">
+            <img class="founder-photo" src="assets/jacob-cremers.jpg" width="240" height="240" alt="Jacob Cremers" loading="lazy" decoding="async">
+          </picture>
+          <div class="founder-copy">
+            <p class="label">Who’s building it</p>
+            <h2 id="founder-title">Jacob Cremers</h2>
+            <p class="founder-lead">An early product project by Jacob Cremers, founder of Beans.</p>
+            <p>Jacob Cremers studied computer science at Harvard and worked as a data analyst at Harvard Law School. He has built productivity tools for unicorn startups and top-10 lobbying firms, and founded Beans.</p>
+            <p>MailToCRM brings that productivity-tool work to one narrow problem: keeping a team’s Airtable base current without retyping what already happened in email.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="wrap cta-inner">
+        <h2 id="cta-title">Tracking relationships in Airtable?</h2>
+        <p>Send a short note about your base and where email fits into it today.</p>
+        <a class="btn btn-cyan" href="mailto:jacob@mailtocrm.com?subject=MailToCRM%20workflow">Discuss your Airtable workflow</a>
+        <p class="cta-alt">Or write to <a class="text-link text-link-dark" href="mailto:jacob@mailtocrm.com">jacob@mailtocrm.com</a></p>
+      </div>
     </section>
   </main>
-  <footer class="shell"><span>© <span data-year></span> MailToCRM</span><span><a href="privacy.html">Privacy</a> · <a href="mailto:jacob@mailtocrm.com">jacob@mailtocrm.com</a></span></footer>
-  <script src="script.js"></script>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>MailToCRM · An early product experiment by Jacob Cremers</p>
+      <ul class="footer-links">
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="mailto:jacob@mailtocrm.com">jacob@mailtocrm.com</a></li>
+        <li>© <span data-year>2026</span> MailToCRM</li>
+      </ul>
+    </div>
+  </footer>
+  <script src="script.js" defer></script>
 </body>
 </html>

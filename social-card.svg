@@ -1,1 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#f7f5f0"/><rect x="70" y="70" width="72" height="72" rx="20" fill="#e05f3d"/><text x="106" y="120" fill="white" text-anchor="middle" font-family="Arial" font-size="38" font-weight="700">M</text><text x="70" y="230" fill="#e05f3d" font-family="Arial" font-size="24" font-weight="700" letter-spacing="3">MAILTOCRM</text><text x="70" y="335" fill="#1d2524" font-family="Arial" font-size="68" font-weight="700">Keep Airtable current with</text><text x="70" y="415" fill="#1d2524" font-family="Arial" font-size="68" font-weight="700">conversations that matter.</text><text x="70" y="520" fill="#60706d" font-family="Arial" font-size="28">A review-first email-to-CRM workflow.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#45d1d9" stroke-opacity=".08" stroke-width="1"/></pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#0b1620"/>
+  <rect x="600" width="600" height="630" fill="url(#grid)"/>
+  <g transform="translate(72 72)">
+    <rect width="56" height="56" rx="14" fill="#45d1d9"/>
+    <path d="M14 20h13M14 28h9M14 36h13M31 28h5.5" stroke="#0b1620" stroke-width="3.8" stroke-linecap="round"/>
+    <rect x="38" y="19" width="6" height="18" rx="2.4" fill="#0b1620"/>
+    <text x="76" y="38" fill="#ffffff" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700">MailToCRM</text>
+  </g>
+  <text x="72" y="290" fill="#ffffff" font-family="Helvetica, Arial, sans-serif" font-size="58" font-weight="700" letter-spacing="-1.5">Turn email threads into</text>
+  <text x="72" y="360" fill="#ffffff" font-family="Helvetica, Arial, sans-serif" font-size="58" font-weight="700" letter-spacing="-1.5">Airtable updates</text>
+  <text x="72" y="430" fill="#ffffff" font-family="Helvetica, Arial, sans-serif" font-size="58" font-weight="700" letter-spacing="-1.5">you approve.</text>
+  <text x="72" y="530" fill="#a6b8c4" font-family="Menlo, Consolas, monospace" font-size="22" letter-spacing="1">GMAIL + OUTLOOK ON THE WEB  →  YOUR AIRTABLE BASE</text>
+  <g font-family="Helvetica, Arial, sans-serif">
+    <rect x="760" y="150" width="368" height="92" rx="14" fill="#122330" stroke="#2a4253"/>
+    <text x="784" y="186" fill="#45d1d9" font-family="Menlo, Consolas, monospace" font-size="16" letter-spacing="1">EMAIL THREAD</text>
+    <rect x="784" y="204" width="260" height="10" rx="5" fill="#2a4253"/>
+    <rect x="784" y="222" width="190" height="10" rx="5" fill="#2a4253"/>
+    <path d="M944 242v40" stroke="#45d1d9" stroke-width="2"/>
+    <circle cx="944" cy="286" r="5" fill="#45d1d9"/>
+    <rect x="760" y="296" width="368" height="64" rx="12" fill="#ffffff"/>
+    <text x="784" y="324" fill="#4d5d69" font-family="Menlo, Consolas, monospace" font-size="14" letter-spacing="1">CONTACTS</text>
+    <text x="784" y="347" fill="#0b1620" font-size="20" font-weight="700">Maya Patel</text>
+    <rect x="760" y="372" width="368" height="64" rx="12" fill="#ffffff"/>
+    <text x="784" y="400" fill="#4d5d69" font-family="Menlo, Consolas, monospace" font-size="14" letter-spacing="1">FOLLOW-UPS</text>
+    <text x="784" y="423" fill="#0b1620" font-size="20" font-weight="700">Send FY26 budget</text>
+    <rect x="760" y="456" width="368" height="48" rx="12" fill="#b4e553"/>
+    <text x="784" y="487" fill="#0b1620" font-size="18" font-weight="700">Approved and written</text>
+  </g>
+</svg>
