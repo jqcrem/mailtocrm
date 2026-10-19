@@ -271,6 +271,25 @@ p { text-wrap: pretty; }
   font-size: .875rem; color: var(--on-dark);
 }
 
+/* Other-CRM interest strip, directly under the hero */
+.other-crm { background: var(--white); border-bottom: 1px solid var(--line); }
+.other-crm-inner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: var(--s-3) var(--s-5); padding-block: var(--s-5);
+}
+.other-crm-text { color: var(--muted); font-size: 1rem; }
+.other-crm-now { color: var(--ink); font-weight: 650; }
+.other-crm-links { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-3); }
+.chip-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 44px; padding: 8px 16px;
+  border: 1.5px solid var(--teal); border-radius: 999px;
+  background: var(--white); color: var(--teal-ink);
+  font-weight: 650; font-size: .9375rem; text-decoration: none;
+}
+.chip-link:hover { background: var(--teal-tint); }
+.chip-link svg { flex: none; }
+
 /* Sections */
 .section { padding-block: var(--section-y); }
 .section-white { background: var(--white); border-block: 1px solid var(--line); }
@@ -553,5 +572,5 @@ p { text-wrap: pretty; }
 
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
-  .btn, .nav-links a, .text-link, .footer-links a { transition: background-color .15s ease, color .15s ease, text-decoration-color .15s ease; }
+  .btn, .chip-link, .nav-links a, .text-link, .footer-links a { transition: background-color .15s ease, color .15s ease, text-decoration-color .15s ease; }
 }
