@@ -205,14 +205,6 @@ p { text-wrap: pretty; }
 .hero h1 { color: var(--white); margin-bottom: var(--s-5); max-width: 13ch; }
 .lede { font-size: clamp(1.0625rem, 1rem + .35vw, 1.25rem); color: var(--on-dark-muted); max-width: 34rem; margin-bottom: var(--s-6); }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-4) var(--s-5); }
-.stage {
-  display: flex; align-items: center; gap: 10px;
-  margin-top: var(--s-6); padding-top: var(--s-4);
-  border-top: 1px solid var(--midnight-line);
-  font-size: .9375rem; color: var(--on-dark-muted);
-  max-width: 34rem;
-}
-.stage-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--lime); flex: none; }
 
 /* Hero mapping figure: email (dark) → proposed records (light) */
 .map { display: grid; gap: var(--s-3); }
@@ -476,10 +468,9 @@ p { text-wrap: pretty; }
   object-fit: cover; background: #dfe6eb;
   border: 4px solid var(--white); box-shadow: 0 0 0 1px var(--line);
 }
-.founder-copy h2 { margin-bottom: var(--s-2); }
-.founder-lead { color: var(--ink); font-weight: 600; font-size: 1.125rem; margin-bottom: var(--s-4); }
+.founder-copy h2 { margin-bottom: var(--s-4); }
 .founder-copy p + p { margin-top: var(--s-3); }
-.founder-copy p:not(.label):not(.founder-lead) { color: var(--muted); }
+.founder-copy p:not(.label) { color: var(--muted); }
 
 /* Final CTA + footer */
 .cta {
